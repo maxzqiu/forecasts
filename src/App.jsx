@@ -47,13 +47,13 @@ function App() {
             let data = await res.json();
             console.log(data);
             if (width<400){
-              ctx.font="4px Lato";
+              ctx.font="5px Lato";
             } else if (width<600){
-              ctx.font="6px Lato"
-            } else if (width<800){
               ctx.font="8px Lato"
+            } else if (width<800){
+              ctx.font="10px Lato"
             } else if (width<1000){
-              ctx.font="11px Lato"
+              ctx.font="12px Lato"
             } else if (width<1200){
               ctx.font="14px Lato"
             } else {
