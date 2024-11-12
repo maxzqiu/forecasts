@@ -53,7 +53,7 @@ function App() {
             } else {
               ctx.font="16px Lato"
             }
-            ctx.font="15px Lato"
+            
             ctx.strokeText("LAST UPDATED: "+data.properties.updateTime+" UTC", 50,50)
             ctx.strokeText("Forecast Valid at "+location+".",0,25)
             for (let i=0;i<14;i+=1){
