@@ -31,6 +31,8 @@ function App() {
           
           const width=canvas.width;
           const height=canvas.height;
+          console.log(width);
+          console.log(height);
           
           console.log(new Date().toUTCString());
           async function fetchWeather() {
@@ -44,6 +46,13 @@ function App() {
             let res = await fetch(LINK);
             let data = await res.json();
             console.log(data);
+            if (width<400){
+              ctx.font="6px Lato";
+            } else if (width<800){
+              ctx.font="11px Lato"
+            } else {
+              ctx.font="16px Lato"
+            }
             ctx.font="15px Lato"
             ctx.strokeText("LAST UPDATED: "+data.properties.updateTime+" UTC", 50,50)
             ctx.strokeText("Forecast Valid at "+location+".",0,25)
