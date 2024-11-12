@@ -142,7 +142,7 @@ function App() {
       <>  
           <div className="one-line">
             <h1>Max's Weather Service Newport Beach CA</h1>
-            <img className="image" src="Screenshot (1053).png" alt="MWS Logo"></img>
+            <img className="image" src="/Screenshot (1053).png" alt="MWS Logo"></img>
           </div>
           <h2>Online Forecast Service</h2>
           
