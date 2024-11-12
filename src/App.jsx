@@ -5,7 +5,45 @@ function App() {
     let [localTime,setLocalTime]=useState("React JS must be enabled. ");
     let [utcTime,setUtcTime]=useState("React JS must be enabled. ");
     let [location,setLocation]=useState("Newport Beach")
-    
+    const days=["Sunday","Sunday Night","Monday","Monday Night","Tuesday","Tuesday Night","Wednesday","Wednesday Night","Thursday","Thursday Night","Friday","Friday Night","Saturday","Saturday Night"];
+    const day_to_shorter={
+      "Sunday":"Sun",
+      "Sunday Night":"Sun Night",
+      "Monday":"Mon",
+      "Monday Night":"Mon Night",
+      "Tuesday":"Tue",
+      "Tuesday Night":"Tue Night",
+      "Wednesday":"Wed",
+      "Wednesday Night":"Wed Night",
+      "Thursday":"Thu",
+      "Thursday Night":"Thu Night",
+      "Friday":"Fri",
+      "Friday Night":"Fri Night",
+      "Saturday":"Sat",
+      "Saturday Night":"Sat Night",
+    }
+    function noQuotations(str){
+      return str.substring(1,str.length-1)
+    }
+    function makeDateShorter(longDate){
+      longDate=longDate.substring(1,longDate.length-1)
+      let isADate=false;
+      console.log(longDate);
+      for (let i of days){
+        
+        if (i==longDate){
+          isADate=true;
+        }
+      }
+      console.log(isADate);
+      if (isADate===false){
+        return longDate;
+      } else {
+        console.log(day_to_shorter[longDate]);
+        return day_to_shorter[longDate];
+      }
+      
+    }
     
     //setInterval(getUTCTime,1000);
     
@@ -63,7 +101,7 @@ function App() {
             ctx.strokeText("LAST UPDATED: "+data.properties.updateTime+" UTC", 50,50)
             ctx.strokeText("Forecast Valid at "+location+".",0,25)
             for (let i=0;i<14;i+=1){
-              ctx.strokeText(JSON.stringify(data.properties.periods[i].name),width*(i+1)/15,100)
+              ctx.strokeText(makeDateShorter(JSON.stringify(data.properties.periods[i].name)),width*(i+1)/15,100)
               ctx.stroke()
             }
             ctx.strokeText("Day --->",0,100);
@@ -112,7 +150,7 @@ function App() {
                 ctx.stroke();
               } else {
                 
-                ctx.strokeText(JSON.stringify(data.properties.periods[i].windDirection),width*(i+1)/15,250)
+                ctx.strokeText(noQuotations(JSON.stringify(data.properties.periods[i].windDirection)),width*(i+1)/15,250)
                 }
               
               ctx.stroke()
@@ -128,7 +166,7 @@ function App() {
                 ctx.stroke();
               } else {
                 
-                ctx.strokeText(JSON.stringify(data.properties.periods[i].windSpeed),width*(i+1)/15,300)
+                ctx.strokeText(noQuotations(JSON.stringify(data.properties.periods[i].windSpeed)),width*(i+1)/15,300)
                 }
               
               ctx.stroke()
