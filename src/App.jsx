@@ -116,7 +116,7 @@ function App() {
               ctx.stroke()
               ctx.strokeStyle="black"
             }
-            ctx.strokeText("High/Low Temp --->",0,150);
+            ctx.strokeText("High/Low",0,150);
             ctx.stroke();
             for (let i=0;i<14;i+=1){
               
@@ -140,7 +140,7 @@ function App() {
               ctx.stroke()
               ctx.strokeStyle="black"
             }
-            ctx.strokeText("Prob of Precip --->",0,200);
+            ctx.strokeText("Prob of Rain",0,200);
             ctx.stroke();
             for (let i=0;i<14;i+=1){
               
@@ -156,7 +156,7 @@ function App() {
               ctx.stroke()
               ctx.strokeStyle="black"
             }
-            ctx.strokeText("Wind Dir --->",0,250);
+            ctx.strokeText("Wind Dir",0,250);
             ctx.stroke();
             for (let i=0;i<14;i+=1){
               
@@ -172,7 +172,7 @@ function App() {
               ctx.stroke()
               ctx.strokeStyle="black"
             }
-            ctx.strokeText("Wind Speed --->",0,300);
+            ctx.strokeText("Wind Spd",0,300);
             ctx.stroke();
             for (let i=0;i<14;i+=1){
               let IMAGE=new Image();
@@ -195,12 +195,12 @@ function App() {
       <>  
           <div className="one-line">
             <h1>Max's Weather Service Newport Beach CA</h1>
-            <img className="image" src="/Screenshot (1053).png" alt="MWS Logo"></img>
+            <img className="image" src="./Screenshot (1053).png" alt="MWS Logo"></img>
           </div>
           <h2>Online Forecast Service</h2>
           
-          <h4>Current UTC Time: {utcTime} UTC</h4>
-          <h5>Local Time: {localTime}</h5>
+          <h3>Current UTC Time: {utcTime} UTC</h3>
+          <h4>Local Time: {localTime}</h4>
           <div>
             <p>Please select your location: Default is Newport Beach</p>
             <button onClick={()=>{
