@@ -215,6 +215,10 @@ function App() {
               setLINK("https://api.weather.gov/gridpoints/LOX/174,44/forecast")
               setLocation("Claremont")
             }}>Claremont</button>
+            <button onClick={()=>{
+              setLINK("https://api.weather.gov/gridpoints/SGX/89,59/forecast")
+              setLocation("Palm Springs International Airport, Palm Springs (KPSP)")
+            }}>Palm Springs Intl Apt (KPSP)</button>
           </div>
           <canvas ref={canvasRef} width="500" height="500"></canvas>
           
