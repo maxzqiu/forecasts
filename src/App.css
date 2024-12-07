@@ -6,3 +6,8 @@
 .one-line{
     display:flex;
 }
+
+.specialmessage{
+    background-color:red;
+    color:white;
+}
