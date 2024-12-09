@@ -28,18 +28,18 @@ function App() {
     function makeDateShorter(longDate){
       longDate=longDate.substring(1,longDate.length-1)
       let isADate=false;
-      console.log(longDate);
+     
       for (let i of days){
         
         if (i==longDate){
           isADate=true;
         }
       }
-      console.log(isADate);
+      
       if (isADate===false){
         return longDate;
       } else {
-        console.log(day_to_shorter[longDate]);
+        
         return day_to_shorter[longDate];
       }
       
@@ -69,10 +69,9 @@ function App() {
           
           const width=canvas.width;
           const height=canvas.height;
-          console.log(width);
-          console.log(height);
           
-          console.log(new Date().toUTCString());
+          
+          
           async function fetchWeather() {
             ctx.clearRect(0,0,500,500)
             ctx.stroke();
@@ -83,7 +82,7 @@ function App() {
             
             let res = await fetch(LINK);
             let data = await res.json();
-            console.log(data);
+            
             if (width<400){
               ctx.font="5px Lato";
             } else if (width<600){
@@ -215,6 +214,10 @@ function App() {
               setLINK("https://api.weather.gov/gridpoints/LOX/174,44/forecast")
               setLocation("Claremont")
             }}>Claremont</button>
+            <button disabled onClick={()=>{
+              setLINK("https://api.weather.gov/gridpoints/SLC/114,167/forecast")
+              setLocation("Park City - Note: Weather conditions may differ at different elevations. ")
+            }}>Park City</button>
             
           </div>
           <canvas ref={canvasRef} width="500" height="500"></canvas>
