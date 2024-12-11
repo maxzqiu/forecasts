@@ -197,7 +197,6 @@ function App() {
             <img className="image" src="./Screenshot (1053).png" alt="MWS Logo"></img>
           </div>
           <h2>Online Forecast Service</h2>
-          <h4 className="specialmessage">SPECIAL MESSAGE FROM MWS: A strong Santa Ana wind event with critical fire weather conditions is unfolding. For more information, please see the fire weather watches/warnings for your specific area. </h4>
           <h3>Current UTC Time: {utcTime} UTC</h3>
           <h4>Local Time: {localTime}</h4>
           <div>
