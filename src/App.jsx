@@ -139,7 +139,7 @@ function App() {
               ctx.stroke()
               ctx.strokeStyle="black"
             }
-            ctx.strokeText("Prob of Rain",0,200);
+            ctx.strokeText("Prob of Precip",0,200);
             ctx.stroke();
             for (let i=0;i<14;i+=1){
               
@@ -194,7 +194,7 @@ function App() {
       <>  
           <div className="one-line">
             <h1>Max's Weather Service Newport Beach CA</h1>
-            <img className="image" src="./Screenshot (1053).png" alt="MWS Logo"></img>
+            <img className="image" src=".\Screenshot (1053).png" alt="MWS Logo"></img>
           </div>
           <h2>Online Forecast Service</h2>
           <h3>Current UTC Time: {utcTime} UTC</h3>
@@ -213,9 +213,9 @@ function App() {
               setLINK("https://api.weather.gov/gridpoints/LOX/174,44/forecast")
               setLocation("Claremont")
             }}>Claremont</button>
-            <button disabled onClick={()=>{
+            <button onClick={()=>{
               setLINK("https://api.weather.gov/gridpoints/SLC/114,167/forecast")
-              setLocation("Park City - Note: Weather conditions may differ at different elevations. ")
+              setLocation("Park City - Note: Weather conditions may differ at different elevations.  Attention: This location is not in the same time zone as MWS Newport Beach ")
             }}>Park City</button>
             
           </div>
