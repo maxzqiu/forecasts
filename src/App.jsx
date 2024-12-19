@@ -192,10 +192,7 @@ function App() {
     );
     return (
       <>  
-          <div className="one-line">
-            <h1>Max's Weather Service Newport Beach CA</h1>
-            <img className="image" src="/Screenshot (1053).png" alt="MWS Logo"></img>
-          </div>
+          
           <h2>Online Forecast Service</h2>
           <h3>Current UTC Time: {utcTime} UTC</h3>
           <h4>Local Time: {localTime}</h4>
