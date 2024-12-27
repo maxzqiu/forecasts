@@ -213,10 +213,7 @@ function App() {
               setLINK("https://api.weather.gov/gridpoints/LOX/174,44/forecast")
               setLocation("Claremont")
             }}>Claremont</button>
-            <button onClick={()=>{
-              setLINK("https://api.weather.gov/gridpoints/SLC/114,167/forecast")
-              setLocation("Park City - Note: Weather conditions may differ at different elevations.  Attention: This location is not in the same time zone as MWS Newport Beach ")
-            }}>Park City</button>
+            
             
           </div>
           <canvas ref={canvasRef} width="500" height="500"></canvas>
