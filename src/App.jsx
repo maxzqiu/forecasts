@@ -65,7 +65,7 @@ function App() {
           const canvas=canvasRef.current;
           const ctx=canvas.getContext("2d");
           canvas.width=window.innerWidth;
-          canvas.height=window.innerHeight;
+          canvas.height=500;
           
           const width=canvas.width;
           const height=canvas.height;
@@ -217,6 +217,7 @@ function App() {
             
           </div>
           <canvas ref={canvasRef} width="500" height="500"></canvas>
+          <a href="https://www.maxweatherservice.com"><button>Go back to MWS Website</button></a>
           
       </>
     )
