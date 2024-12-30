@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
 function App() {
-    let [localTime,setLocalTime]=useState("React JS must be enabled. ");
+    /* let [localTime,setLocalTime]=useState("React JS must be enabled. ");
     let [utcTime,setUtcTime]=useState("React JS must be enabled. ");
     let [location,setLocation]=useState("Newport Beach")
     const days=["Sunday","Sunday Night","Monday","Monday Night","Tuesday","Tuesday Night","Wednesday","Wednesday Night","Thursday","Thursday Night","Friday","Friday Night","Saturday","Saturday Night"];
@@ -189,15 +189,17 @@ function App() {
             
       },
       [LINK]
-    );
+    ); */
     return (
       <>
+        <p>Error: Not Found</p>
+        <p>Please contact MWS if you think this is an issue. </p>
       
         
       
        
         
-        <div className="one-line">
+        {/* <div className="one-line">
           <h1>Max's Weather Service Newport Beach CA</h1>
           <img className="image" src="/Screenshot (1053).png" alt="MWS Logo"></img>
         </div>
@@ -223,7 +225,7 @@ function App() {
           </div>
           <canvas ref={canvasRef} width="500" height="500"></canvas>
           <a href="https://www.maxweatherservice.com"><button>Go back to MWS Website</button></a>
-        
+         */}
           
        </>
       
