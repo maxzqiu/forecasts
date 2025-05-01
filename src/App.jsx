@@ -82,6 +82,7 @@ function App() {
             
             let res = await fetch(LINK);
             let data = await res.json();
+            console.log(data);
             
             if (width<400){
               ctx.font="5px Lato";
@@ -219,8 +220,12 @@ function App() {
             setLINK("https://api.weather.gov/gridpoints/LOX/174,44/forecast")
             setLocation("Claremont")
           }}>Claremont</button>
+          <button onClick={()=>{
+            setLINK("https://api.weather.gov/gridpoints/MPX/95,73/forecast")
+            setLocation("Maple Plain")
+          }}>Maple Plain</button>
             
-            
+          <p>This website works, but we recommend using the Forecasts page on the MWS Website which can be accessed at <a href="https://www.maxweatherservice.com/forecasts">www.maxweatherservice.com/forecasts</a></p>
           </div>
           <canvas ref={canvasRef} width="500" height="500"></canvas>
           <a href="https://www.maxweatherservice.com"><button>Go back to MWS Website</button></a> 
